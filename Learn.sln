@@ -3,7 +3,24 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2018
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC1", "MVC1\MVC1.csproj", "{36834B78-E909-4EC5-9898-1CBE7739DF65}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCMovie", "MVCMovie\MVCMovie.csproj", "{B3823618-6124-4034-BCC2-04DFC43DE633}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{36834B78-E909-4EC5-9898-1CBE7739DF65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36834B78-E909-4EC5-9898-1CBE7739DF65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36834B78-E909-4EC5-9898-1CBE7739DF65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3823618-6124-4034-BCC2-04DFC43DE633}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3823618-6124-4034-BCC2-04DFC43DE633}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3823618-6124-4034-BCC2-04DFC43DE633}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3823618-6124-4034-BCC2-04DFC43DE633}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
