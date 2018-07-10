@@ -21,8 +21,8 @@ namespace MVCMovie.Controllers
             var GenreLst = new List<string>();
 
             var GenreQry = from d in db.Movies
-                           orderby d.Gnere
-                           select d.Gnere;
+                           orderby d.Genre
+                           select d.Genre;
 
             GenreLst.AddRange(GenreQry.Distinct());// add the distinct gnere.
             ViewBag.movieGenre = new SelectList(GenreLst);
@@ -38,7 +38,7 @@ namespace MVCMovie.Controllers
 
             if (!string.IsNullOrEmpty(movieGenre))
             {
-                movies = movies.Where(x => x.Gnere == movieGenre);
+                movies = movies.Where(x => x.Genre == movieGenre);
             }
             return View(movies);
         }
@@ -76,7 +76,7 @@ namespace MVCMovie.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Title,ReleaseDate,Gnere,Price")] Movie movie)
+        public ActionResult Create([Bind(Include = "Id,Title,ReleaseDate,Genre,Price,Rating")] Movie movie)
         {
             if (ModelState.IsValid)
             {
@@ -108,7 +108,7 @@ namespace MVCMovie.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Title,ReleaseDate,Gnere,Price")] Movie movie)
+        public ActionResult Edit([Bind(Include = "Id,Title,ReleaseDate,Genre,Price,Rating")] Movie movie)
         {
             if (ModelState.IsValid)
             {
