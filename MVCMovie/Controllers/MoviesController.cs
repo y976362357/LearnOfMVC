@@ -14,6 +14,7 @@ namespace MVCMovie.Controllers
     {
         private MovieDbContext db = new MovieDbContext();
 
+        //[ActionName("Index1")]
         // GET: Movies
         public ActionResult Index(string searchString, string movieGenre)
         {
@@ -40,7 +41,7 @@ namespace MVCMovie.Controllers
             {
                 movies = movies.Where(x => x.Genre == movieGenre);
             }
-            return View(movies);
+            return View("index",movies);
         }
 
 
@@ -70,7 +71,7 @@ namespace MVCMovie.Controllers
         {
             return View();
         }
-
+ 
         // POST: Movies/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
