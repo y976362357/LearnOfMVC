@@ -199,12 +199,17 @@
     <Compile Include="Migrations\201807171443328_RowVersion.Designer.cs">
       <DependentUpon>201807171443328_RowVersion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201807181257586_Inheritance.cs" />
+    <Compile Include="Migrations\201807181257586_Inheritance.Designer.cs">
+      <DependentUpon>201807181257586_Inheritance.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Course.cs" />
     <Compile Include="Models\Department.cs" />
     <Compile Include="Models\Enrollment.cs" />
     <Compile Include="Models\Instructor.cs" />
     <Compile Include="Models\OfficeAssignment.cs" />
+    <Compile Include="Models\Person.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModel\AssignedCourseData.cs" />
@@ -306,6 +311,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201807171443328_RowVersion.resx">
       <DependentUpon>201807171443328_RowVersion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807181257586_Inheritance.resx">
+      <DependentUpon>201807181257586_Inheritance.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
