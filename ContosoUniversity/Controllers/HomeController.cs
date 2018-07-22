@@ -20,13 +20,21 @@ namespace ContosoUniversity.Controllers
         {
             ViewBag.Message = "Your application description page.";
 
-            var data = from student in db.Students
-                       group student by student.EnrollmentDate into studentGroup
-                       select new EnrollmentDateGroup
-                       {
-                           EnrollmentDate = studentGroup.Key,
-                           StudentCount = studentGroup.Count()
-                       };
+            //var data = from student in db.Students
+            //           group student by student.EnrollmentDate into studentGroup
+            //           select new EnrollmentDateGroup
+            //           {
+            //               EnrollmentDate = studentGroup.Key,
+            //               StudentCount = studentGroup.Count()
+            //           };
+
+            // SQL version of the above LINQ code.
+            string query = "SELECT EnrollmentDate, COUNT(*) AS StudentCount "
+                + "FROM Person "
+                + "WHERE Discriminator = 'Student' "
+                + "GROUP BY EnrollmentDate";
+            IEnumerable<EnrollmentDateGroup> data = db.Database.SqlQuery<EnrollmentDateGroup>(query);
+
             return View(data.ToList());
         }
 
